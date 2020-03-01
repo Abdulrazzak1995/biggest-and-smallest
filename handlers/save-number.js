@@ -6,7 +6,7 @@ let newValue = document.getElementById('input').value;
 numbers.all.push(newValue);
   // find the new biggest and smallest values
 const bigNumber = Math.max(...numbers.all);
-const smallNumber = Math.min(...number.all);
+const smallNumber = Math.min(...numbers.all);
   // update state: new biggest, new smallest, new current & save the last current
 numbers.biggest = bigNumber;
 numbers.smallest = smallNumber;
@@ -16,7 +16,7 @@ document.getElementById("smallest").innerText= smallNumber;
   // log user interaction: handler name, user input, new state
   log.push({
     handler: 'save number',
-    newInput,
+    newValue,
     numbers: JSON.parse(JSON.stringify(numbers))
   })
 }
